@@ -405,3 +405,299 @@ The algorithms included in this project demonstrate different approaches to solv
 
 Understanding these algorithms provides a strong foundation for learning **Data Structures and Algorithms (DSA)**.
 
+
+# Graph Algorithms in Python
+
+This repository contains simple Python implementations of important **Graph Algorithms** with user input.
+
+The project covers:
+
+* **BFS (Breadth-First Search)**
+* **DFS (Depth-First Search)**
+* **Prim's Algorithm**
+* **Kruskal's Algorithm**
+
+These algorithms are useful for understanding graph traversal, connectivity, and Minimum Spanning Trees (MST).
+
+---
+
+## 📌 Algorithms Included
+
+### 1. Breadth-First Search (BFS)
+
+BFS is a graph traversal algorithm that visits vertices **level by level**.
+
+It uses a **Queue** data structure.
+
+**Time Complexity:**
+
+* Best Case: `O(V + E)`
+* Average Case: `O(V + E)`
+* Worst Case: `O(V + E)`
+
+**Space Complexity:** `O(V)`
+
+Where:
+
+* `V` = Number of vertices
+* `E` = Number of edges
+
+---
+
+### 2. Depth-First Search (DFS)
+
+DFS is a graph traversal algorithm that explores as far as possible along one branch before backtracking.
+
+It can be implemented using **recursion or a stack**.
+
+**Time Complexity:**
+
+* Best Case: `O(V + E)`
+* Average Case: `O(V + E)`
+* Worst Case: `O(V + E)`
+
+**Space Complexity:** `O(V)`
+
+---
+
+### 3. Prim's Algorithm
+
+Prim's Algorithm is a **Greedy Algorithm** used to find the **Minimum Spanning Tree (MST)** of a connected, weighted, undirected graph.
+
+It starts from a selected vertex and repeatedly adds the minimum-weight edge that connects a vertex in the MST to a vertex outside the MST.
+
+**Time Complexity:**
+
+* Using adjacency matrix: `O(V²)`
+* Using priority queue: `O(E log V)`
+
+**Space Complexity:** `O(V + E)`
+
+---
+
+### 4. Kruskal's Algorithm
+
+Kruskal's Algorithm is a **Greedy Algorithm** used to find the **Minimum Spanning Tree (MST)**.
+
+It sorts all edges according to their weights and then adds the smallest edge if it does not create a cycle.
+
+It commonly uses the **Disjoint Set / Union-Find** data structure.
+
+**Time Complexity:**
+
+* Best Case: `O(E log E)`
+* Average Case: `O(E log E)`
+* Worst Case: `O(E log E)`
+
+**Space Complexity:** `O(V + E)`
+
+---
+
+## 📂 Project Structure
+
+```text
+Graph-Algorithms/
+│
+├── BFS.py
+├── DFS.py
+├── Prims.py
+├── Kruskals.py
+└── README.md
+```
+
+---
+
+## 🛠️ Requirements
+
+* Python 3.x
+* No external libraries are required.
+
+Check your Python version:
+
+```bash
+python --version
+```
+
+---
+
+## ▶️ How to Run
+
+Clone the repository:
+
+```bash
+git clone https://github.com/your-username/Graph-Algorithms.git
+```
+
+Move into the project folder:
+
+```bash
+cd Graph-Algorithms
+```
+
+Run BFS:
+
+```bash
+python BFS.py
+```
+
+Run DFS:
+
+```bash
+python DFS.py
+```
+
+Run Prim's Algorithm:
+
+```bash
+python Prims.py
+```
+
+Run Kruskal's Algorithm:
+
+```bash
+python Kruskals.py
+```
+
+---
+
+## 📥 User Input
+
+The programs are designed to accept graph information from the user.
+
+Depending on the algorithm, the input may include:
+
+```text
+Number of vertices
+Number of edges
+Edges
+Edge weights
+Starting vertex
+```
+
+Example:
+
+```text
+Enter number of vertices: 5
+Enter number of edges: 6
+
+Enter edge 1: 0 1
+Enter edge 2: 0 2
+Enter edge 3: 1 3
+Enter edge 4: 1 4
+Enter edge 5: 2 4
+Enter edge 6: 3 4
+
+Enter starting vertex: 0
+```
+
+---
+
+## 📊 Comparison of Algorithms
+
+| Algorithm | Type      | Main Purpose          | Data Structure        | Time Complexity        |
+| --------- | --------- | --------------------- | --------------------- | ---------------------- |
+| BFS       | Traversal | Graph traversal       | Queue                 | `O(V + E)`             |
+| DFS       | Traversal | Graph traversal       | Stack/Recursion       | `O(V + E)`             |
+| Prim's    | Greedy    | Minimum Spanning Tree | Priority Queue/Matrix | `O(E log V)` / `O(V²)` |
+| Kruskal's | Greedy    | Minimum Spanning Tree | Union-Find            | `O(E log E)`           |
+
+---
+
+## 🔍 BFS vs DFS
+
+| Feature                           | BFS                  | DFS                |
+| --------------------------------- | -------------------- | ------------------ |
+| Full Form                         | Breadth-First Search | Depth-First Search |
+| Approach                          | Level by level       | Depth first        |
+| Data Structure                    | Queue                | Stack/Recursion    |
+| Shortest path in unweighted graph | Yes                  | Not guaranteed     |
+| Time Complexity                   | `O(V + E)`           | `O(V + E)`         |
+| Space Complexity                  | `O(V)`               | `O(V)`             |
+
+---
+
+## 🌳 Prim's vs Kruskal's
+
+| Feature             | Prim's Algorithm      | Kruskal's Algorithm       |
+| ------------------- | --------------------- | ------------------------- |
+| Type                | Greedy                | Greedy                    |
+| Purpose             | Minimum Spanning Tree | Minimum Spanning Tree     |
+| Approach            | Starts from a vertex  | Starts from smallest edge |
+| Main Data Structure | Priority Queue        | Union-Find                |
+| Cycle Handling      | Naturally avoided     | Explicitly checked        |
+| Suitable for        | Dense graphs          | Sparse graphs             |
+| Time Complexity     | `O(E log V)`          | `O(E log E)`              |
+
+---
+
+## 🎯 Applications
+
+### BFS
+
+* Shortest path in unweighted graphs
+* Network broadcasting
+* Web crawling
+* Social network analysis
+
+### DFS
+
+* Cycle detection
+* Topological sorting
+* Maze solving
+* Connected components
+
+### Prim's Algorithm
+
+* Network design
+* Electrical grid design
+* Road construction
+* Computer network optimization
+
+### Kruskal's Algorithm
+
+* Network design
+* Minimum-cost connections
+* Road and cable network planning
+* Clustering applications
+
+---
+
+## 📚 Concepts Covered
+
+This project helps demonstrate the following concepts:
+
+* Graph representation
+* Graph traversal
+* Queue
+* Stack
+* Recursion
+* Weighted graphs
+* Greedy algorithms
+* Minimum Spanning Tree
+* Cycle detection
+* Union-Find / Disjoint Set
+* Time and space complexity
+
+---
+
+## 🚀 Learning Objective
+
+The main objective of this project is to understand how different graph algorithms work and how their performance differs depending on the graph structure.
+
+By implementing these algorithms in Python with user input, students can practice both **algorithm design** and **complexity analysis**.
+
+---
+
+## 👨‍💻 Author
+
+**Sricharan Yenugula**
+
+GitHub: `https://github.com/your-username`
+
+---
+
+## 📄 License
+
+This project is created for **educational and learning purposes**.
+
+
